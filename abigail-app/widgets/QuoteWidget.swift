@@ -10,10 +10,11 @@ import CoreData
 
 struct QuoteWidget: View {
     @Environment(\.managedObjectContext) private var viewContext
+
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Quote.id, ascending: true)],
         animation: .default)
-    private var quotes: FetchedResults<Quote>
+    private var items: FetchedResults<Quote>
 
     var body: some View {
         VStack {
