@@ -19,7 +19,8 @@ struct QuoteWidget: View {
     var body: some View {
         VStack {
             Button(action: addQuote) {
-                Label("Add Item", systemImage: "plus")
+                Image(systemName: "plus")
+                    .font(.title3)
             }
             Text("Quote")
             Text("Source")
