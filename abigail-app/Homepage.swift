@@ -16,6 +16,7 @@ struct Homepage: View {
                 .padding()
             Text("How are you today?")
                 .padding()
+            QuoteWidget()
             Text("Today's quote")
                 .padding()
             Text("Word of the day")
