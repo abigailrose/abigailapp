@@ -17,12 +17,12 @@ struct Homepage: View {
                     .padding()
                 Text("How are you today?")
                     .padding()
-                Text("Today's quote")
-                    .foregroundColor(Color.black)
-                    .padding()
                 NavigationLink(destination: QuoteView()) {
-                    QuoteWidget()
+                    Text("Today's quote")
+                        .foregroundColor(Color.black)
+                        .padding()
                 }
+                QuoteWidget()
                 Text("Word of the day")
                     .padding()
                 Text("Last night's sleep")

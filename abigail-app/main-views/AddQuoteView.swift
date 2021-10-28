@@ -59,6 +59,7 @@ struct AddQuoteView: View {
             newQuote.source = source
             newQuote.quote = quote
             newQuote.id = UUID()
+            newQuote.timesShown = 0;
         }
 
         do {
