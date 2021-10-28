@@ -24,12 +24,20 @@ struct AddQuoteView: View {
         VStack {
             Text("Add a new quote")
                 .font(.title)
-//            ZStack {
-//                Text(quote).opacity(0).padding(.all, 8) // <- This will solve the issue if it is in the same ZStack
-//                TextEditor(text: $quote)
-//            }
-            TextField("Source", text: $source)
+            
+            //TODO: I don't love how this looks
+            TextEditor(text: $quote)
                 .font(.title3)
+                .shadow(radius: 1)
+                .padding()
+            HStack {
+                Text("Source: ")
+                    .font(.title3)
+                TextField("Enter source", text: $source)
+                    .font(.title3)
+                    .padding()
+            }
+            .padding()
             Button(action: {
                 addQuote()
                 self.presentation.wrappedValue.dismiss()
