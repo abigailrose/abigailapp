@@ -9,17 +9,42 @@ import SwiftUI
 
 struct AddQuoteView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.presentationMode) var presentation
+    
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Quote.id, ascending: true)],
+        animation: .default)
+    private var quotes: FetchedResults<Quote>
+    
+    
+    @State private var quote: String = ""
+    @State private var source: String = ""
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Add a new quote")
+            TextField("Quote", text: $quote)
+            TextField("Source", text: $source)
+            Button(action: {
+                addQuote()
+                self.presentation.wrappedValue.dismiss()
+            }) {
+                Label("Add Quote", systemImage: "plus")
+            }
+        }
+        .padding()
     }
     
     func addQuote() {
         print("I am a quote")
         
-        let newQuote = Quote(context: viewContext)
-        newQuote.source = "source"
-        newQuote.quote = "quote"
+        if quote != "" && source != "" {
+            let newQuote = Quote(context: viewContext)
+            newQuote.source = source
+            newQuote.quote = quote
+            newQuote.id = UUID()
+            print(newQuote.source)
+        }
 
         do {
             try viewContext.save()
