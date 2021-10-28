@@ -23,14 +23,19 @@ struct AddQuoteView: View {
     var body: some View {
         VStack {
             Text("Add a new quote")
+                .font(.title)
             TextField("Quote", text: $quote)
+                .font(.title3)
             TextField("Source", text: $source)
+                .font(.title3)
             Button(action: {
                 addQuote()
                 self.presentation.wrappedValue.dismiss()
             }) {
                 Label("Add Quote", systemImage: "plus")
+                    .font(.title3)
             }
+            Spacer()
         }
         .padding()
     }
@@ -51,8 +56,7 @@ struct AddQuoteView: View {
             // Replace this implementation with code to handle the error appropriately.
             // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             let nsError = error as NSError
-            print(nsError.localizedDescription)
-            //fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
 
