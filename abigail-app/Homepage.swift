@@ -9,20 +9,25 @@ import SwiftUI
 
 struct Homepage: View {
     var body: some View {
-        VStack {
-            HelloWidget()
-                .padding()
-            Text("Today's weather")
-                .padding()
-            Text("How are you today?")
-                .padding()
-            Text("Today's quote")
-                .padding()
-            QuoteWidget()
-            Text("Word of the day")
-                .padding()
-            Text("Last night's sleep")
-                .padding()
+        NavigationView {
+            VStack {
+                HelloWidget()
+                    .padding()
+                Text("Today's weather")
+                    .padding()
+                Text("How are you today?")
+                    .padding()
+                Text("Today's quote")
+                    .foregroundColor(Color.black)
+                    .padding()
+                NavigationLink(destination: QuoteView()) {
+                    QuoteWidget()
+                }
+                Text("Word of the day")
+                    .padding()
+                Text("Last night's sleep")
+                    .padding()
+            }
         }
     }
 }

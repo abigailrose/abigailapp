@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D173E627272B099700625CF5 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D173E626272B099700625CF5 /* QuoteView.swift */; };
 		D17C8B2C2727357E008F18B1 /* abigail_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C8B2B2727357E008F18B1 /* abigail_appApp.swift */; };
 		D17C8B2E2727357E008F18B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17C8B2D2727357E008F18B1 /* ContentView.swift */; };
 		D17C8B3027273581008F18B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D17C8B2F27273581008F18B1 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D173E626272B099700625CF5 /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
 		D17C8B282727357E008F18B1 /* abigail-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "abigail-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17C8B2B2727357E008F18B1 /* abigail_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = abigail_appApp.swift; sourceTree = "<group>"; };
 		D17C8B2D2727357E008F18B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D173E625272B097D00625CF5 /* main-views */ = {
+			isa = PBXGroup;
+			children = (
+				D173E626272B099700625CF5 /* QuoteView.swift */,
+			);
+			path = "main-views";
+			sourceTree = "<group>";
+		};
 		D17C8B1F2727357E008F18B1 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +71,7 @@
 		D17C8B2A2727357E008F18B1 /* abigail-app */ = {
 			isa = PBXGroup;
 			children = (
+				D173E625272B097D00625CF5 /* main-views */,
 				D17C8B4227273A15008F18B1 /* widgets */,
 				D17C8B2B2727357E008F18B1 /* abigail_appApp.swift */,
 				D17C8B2D2727357E008F18B1 /* ContentView.swift */,
@@ -163,6 +174,7 @@
 				D17C8B3527273581008F18B1 /* Persistence.swift in Sources */,
 				D17C8B3827273581008F18B1 /* abigail_app.xcdatamodeld in Sources */,
 				D17C8B4427273A2D008F18B1 /* QuoteWidget.swift in Sources */,
+				D173E627272B099700625CF5 /* QuoteView.swift in Sources */,
 				D17C8B2E2727357E008F18B1 /* ContentView.swift in Sources */,
 				D17C8B3F272735C3008F18B1 /* Homepage.swift in Sources */,
 				D17C8B41272736B0008F18B1 /* HelloWidget.swift in Sources */,
