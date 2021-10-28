@@ -17,18 +17,19 @@ struct QuoteView: View {
     
     var body: some View {
         VStack {
-            NavigationLink(destination: AddQuoteView()) {
-                Image(systemName: "plus")
-                    .font(.title3)
-            }
-            Button(action: test) {
-                Text("test")
-            }
             List {
                 ForEach(quotes) { quote in
                     Text(quote.quote ?? "")
                 }
                 .onDelete(perform: deleteItems)
+            }
+        }
+        .toolbar {
+            ToolbarItem {
+                NavigationLink(destination: AddQuoteView()) {
+                    Image(systemName: "plus")
+                        .font(.title3)
+                }
             }
         }
     }
