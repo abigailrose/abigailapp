@@ -24,8 +24,10 @@ struct AddQuoteView: View {
         VStack {
             Text("Add a new quote")
                 .font(.title)
-            TextField("Quote", text: $quote)
-                .font(.title3)
+//            ZStack {
+//                Text(quote).opacity(0).padding(.all, 8) // <- This will solve the issue if it is in the same ZStack
+//                TextEditor(text: $quote)
+//            }
             TextField("Source", text: $source)
                 .font(.title3)
             Button(action: {
@@ -37,6 +39,7 @@ struct AddQuoteView: View {
             }
             Spacer()
         }
+        Spacer()
         .padding()
     }
     

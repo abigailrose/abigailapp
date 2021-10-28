@@ -14,6 +14,7 @@ struct QuoteView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Quote.id, ascending: true)],
         animation: .default)
     private var quotes: FetchedResults<Quote>
+    @State private var test: String = ""
     
     var body: some View {
         VStack {
@@ -31,13 +32,6 @@ struct QuoteView: View {
                         .font(.title3)
                 }
             }
-        }
-    }
-    
-    func test() {
-        for quote in quotes {
-            print(quote.quote)
-            print(quote.source)
         }
     }
     
