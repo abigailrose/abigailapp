@@ -26,8 +26,7 @@ struct QuoteView: View {
             }
             List {
                 ForEach(quotes) { quote in
-                    Text(quote.source ?? "")
-                    let _ = print(quote.quote)
+                    Text(quote.quote ?? "")
                 }
                 .onDelete(perform: deleteItems)
             }

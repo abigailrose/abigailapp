@@ -29,6 +29,7 @@ struct Homepage: View {
                     .padding()
             }
         }
+        .navigationBarBackButtonHidden(false)
     }
 }
 
